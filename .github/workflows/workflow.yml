@@ -107,7 +107,7 @@ jobs:
       - name: Publish font as release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ env.FONT_NAME_SLUG }}
+          tag_name: ${{ env.FONT_NAME_SLUG }}-${{github.event.inputs.font_size}}
           name: ${{ github.event.inputs.font_name }}
           body: |
             ### Preview
